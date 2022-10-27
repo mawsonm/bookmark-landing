@@ -1,0 +1,104 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 2rem 0;
+    margin: 0 auto;
+    align-items: baseline;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    padding: 1.5rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+ul button {
+    background-color: hsl(0, 94%, 66%);
+    margin: 1.5rem;
+    letter-spacing: 3px;
+    padding: 0.7rem 2rem;
+}
+
+button {
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    color: white;
+    border: none;
+    background-color: hsl(231, 69%, 60%);
+    font-weight: 400;
+}
+
+.hero{
+    max-width: 1280px;
+    margin: 6rem auto;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: visible;
+}
+
+.hero svg {
+    margin-right: -8rem;
+}
+
+.flex-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem 0;
+    width: 28rem;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    color: hsl(229, 8%, 60%);
+    line-height: 1.6;
+}
+
+.contained {
+    background-color: hsl(0, 0%, 93%);
+    color: black;
+    box-shadow: 0px 5px 5px 2px rgb(233, 233, 233);
+}
+
+.mxr-1 {
+    margin-right: 1rem;
+}
+
+.rectangle {
+    background-color: hsl(231, 69%, 60%);
+    height: 25rem;
+    width: 25%;
+    position: absolute;
+    right: 0;
+    top: 22rem;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    width: 21.875rem;
+    height: 21.875rem;
+    right: 18.75rem;
+    top: 25.125rem;
+    border-radius: 50%;
+    background-color: hsl(231, 69%, 60%);
+    z-index: -2;
+}
