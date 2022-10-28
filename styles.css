@@ -82,23 +82,21 @@ p {
     margin-right: 1rem;
 }
 
-.rectangle {
-    background-color: hsl(231, 69%, 60%);
-    height: 25rem;
-    width: 25%;
+.shape {
     position: absolute;
-    right: 0;
-    top: 22rem;
-    z-index: -1;
-}
-
-.circle {
-    position: absolute;
-    width: 21.875rem;
-    height: 21.875rem;
-    right: 18.75rem;
-    top: 25.125rem;
-    border-radius: 50%;
+    top: 25%;
+    right: -10%;
+    border-start-start-radius: 175px 175px;
+    border-end-start-radius: 175px 175px;
     background-color: hsl(231, 69%, 60%);
     z-index: -2;
+    width: 44%;
+    height: 75%;
+    transform: rotateX(45deg);
+}
+
+.outer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
