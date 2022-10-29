@@ -44,11 +44,13 @@ button {
 }
 
 .hero{
-    max-width: 1280px;
-    margin: 6rem auto;
     display: flex;
     justify-content: space-between;
-    overflow-x: visible;
+}
+
+section {
+    max-width: 1280px;
+    margin: 4rem auto;
 }
 
 .hero svg {
@@ -95,8 +97,135 @@ p {
     transform: rotateX(45deg);
 }
 
+.selected-tab {
+    margin-top: 0;
+}
+
 .outer {
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+.features-tabs {
+    display: grid;
+    place-items: center;
+}
+
+.features-text h2, .features-text p {
+    margin-bottom: 1rem;
+}
+
+.features-text h2 {
+    font-size: 32px;
+}
+
+.features-text {
+    width: 30rem;
+}
+
+.tabs{
+    display:inline-flex;
+    margin-top: 2.5rem;
+}
+
+.tab {
+    font-size: 16px;
+    padding: 1rem 1.75rem;
+    border-bottom: 1px solid hsl(0, 0%, 89%);
+    color: hsl(229, 8%, 60%);
+}
+
+.tab.active {
+    border-bottom: 4px solid hsl(0, 94%, 66%);
+    color: black;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-text h2{
+    font-size: 32px;
+}
+
+.fit {
+    width: fit-content;
+}
+
+.shape.inverted {
+    left: -10%;
+    top: 30%;
+    transform: rotate(180deg);
+}
+
+.download, .faq {
+    display: grid;
+    place-items: center;
+}
+
+
+.staggered {
+    gap: 2rem;
+    display: inline-flex;
+}
+
+.staggered > *:nth-child(2) {
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+}
+
+.staggered > *:nth-child(3) {
+    margin-top: 4rem;
+    margin-bottom: -4rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.card > *:not(p) {
+    margin-top: 2rem;
+}
+
+.card > button {
+    width: fit-content;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion, .faq button {
+    margin-top: 2rem;
+}
+
+.faq button {
+    align-self: center;;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsl(0, 0%, 89%);
+    border-top: 1px solid hsl(0, 0%, 89%);
+    padding: 1.5rem 0;
+}
+
+.row:first-child {
+    border-top: 2px solid hsl(0, 0%, 89%);
+}
+
+.row:last-child {
+    border-bottom: 2px solid hsl(0, 0%, 89%);
 }
