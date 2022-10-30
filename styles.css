@@ -25,6 +25,7 @@ a {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
+    font-size: 12px;
 }
 
 ul button {
@@ -228,4 +229,70 @@ p {
 
 .row:last-child {
     border-bottom: 2px solid hsl(0, 0%, 89%);
+}
+
+.email {
+    background-color: hsl(231, 69%, 60%);
+    color: white;
+    max-width: 100%;
+    margin: 0;
+}
+
+.email p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.email h3 {
+    font-size: 32px;
+}
+
+.email button {
+    background-color: hsl(0, 94%, 66%);
+}
+
+.email-form {
+    display: inline-block;
+}
+
+input {
+    border-radius: 3px;
+    border: none;
+    width: 17rem;
+    height: 3rem;
+    padding-left: 1rem;
+    margin-right: 1rem;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    background-color: hsl(229, 31%, 21%);
+    padding: 2rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.gap-2 {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.gap-2 svg {
+    margin-right: 3rem;
+}
+
+.gap-2 a{
+    color: white;
 }
