@@ -26,6 +26,12 @@ a {
     font-weight: 400;
     letter-spacing: 3px;
     font-size: 12px;
+    cursor: pointer;
+}
+
+a:hover {
+    transition: color 0.3s ease-in-out;
+    color:hsl(0, 94%, 66%);
 }
 
 ul button {
@@ -35,6 +41,13 @@ ul button {
     padding: 0.7rem 2rem;
 }
 
+ul button:hover, .email button:hover {
+    background-color: transparent;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color:hsl(0, 94%, 66%);
+    border: 2px solid hsl(0, 94%, 66%);
+}
+
 button {
     border-radius: 6px;
     padding: 1rem 1.5rem;
@@ -42,6 +55,15 @@ button {
     border: none;
     background-color: hsl(231, 69%, 60%);
     font-weight: 400;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+button:hover {
+    background-color: transparent;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color:hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
 }
 
 .hero{
@@ -79,6 +101,13 @@ p {
     background-color: hsl(0, 0%, 93%);
     color: black;
     box-shadow: 0px 5px 5px 2px rgb(233, 233, 233);
+}
+
+.contained:hover {
+    color: black;
+    background-color: transparent;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border: 2px solid black;
 }
 
 .mxr-1 {
@@ -135,6 +164,16 @@ p {
     padding: 1rem 1.75rem;
     border-bottom: 1px solid hsl(0, 0%, 89%);
     color: hsl(229, 8%, 60%);
+    cursor: pointer;
+}
+
+.selected-tab svg {
+    background-color: #E8EAF6;
+}
+
+.tab:hover {
+    transition: color 0.3s ease-in-out;
+    color:hsl(0, 94%, 66%);
 }
 
 .tab.active {
@@ -221,6 +260,11 @@ p {
     border-bottom: 1px solid hsl(0, 0%, 89%);
     border-top: 1px solid hsl(0, 0%, 89%);
     padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+.row:hover h4 {
+    color: hsl(0, 94%, 66%);
 }
 
 .row:first-child {
@@ -231,6 +275,28 @@ p {
     border-bottom: 2px solid hsl(0, 0%, 89%);
 }
 
+.row svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.row.selected svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row path {
+    transition: stroke 0.3s ease-in-out;
+}
+
+.row.selected path {
+    stroke:hsl(0, 94%, 66%);
+    transition: stroke 0.3s ease-in-out;
+}
+
+.row.selected {
+    border-bottom: none;
+}
+
 .email {
     background-color: hsl(231, 69%, 60%);
     color: white;
@@ -238,7 +304,7 @@ p {
     margin: 0;
 }
 
-.email p {
+.email .num-joined {
     color: white;
     text-transform: uppercase;
     font-size: 12px;
@@ -254,16 +320,29 @@ p {
 }
 
 .email-form {
-    display: inline-block;
+    display: flex;
+}
+
+.input-container {
+    position: relative;
 }
 
 input {
     border-radius: 3px;
     border: none;
-    width: 17rem;
     height: 3rem;
     padding-left: 1rem;
     margin-right: 1rem;
+    position: relative;
+    width: 17rem;
+}
+
+.email-form svg {
+    position: absolute;
+    margin-left: 15rem;
+    margin-top: 1rem;
+    display: none;
+    z-index: 1;
 }
 
 .container {
@@ -291,8 +370,62 @@ footer {
 
 .gap-2 svg {
     margin-right: 3rem;
+    cursor: pointer;
+}
+
+.gap-2 svg:hover path {
+    fill: hsl(0, 94%, 66%);
+    transition: fill 0.3s ease-in-out;
 }
 
 .gap-2 a{
     color: white;
+}
+
+.gap-2 a:hover {
+    transition: color 0.3s ease-in-out;
+    color:hsl(0, 94%, 66%);
+}
+
+.hide {
+    display: none;
+}
+
+.accordion p {
+    margin: 1rem 0;
+    color: black;
+}
+
+.email-form.invalid input {
+    border: 2px solid hsl(0, 94%, 66%);
+}
+
+.email-form.invalid svg {
+    display: block;
+}
+
+.email-form.invalid button {
+    background-color: white;
+    color: hsl(0, 94%, 66%);
+    border: 2px solid hsl(0, 94%, 66%);
+}
+
+.error-text {
+    background-color: hsl(0, 94%, 66%);
+    position: absolute;
+    border-radius: 3px;
+    padding: 0.5rem;
+    display: none;
+    top:3rem;
+    width: 17rem;
+}
+
+.error-text.show {
+    display: block;
+}
+
+.error-text p{
+    font-style:italic;
+    color: white;
+    font-size: 12px;
 }
