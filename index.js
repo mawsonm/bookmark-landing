@@ -8,6 +8,10 @@ const form = document.querySelector(".email-form");
 
 const errorMsg = document.querySelector(".error-text");
 
+const burger = document.querySelector(".burger");
+
+const close = document.getElementById("close");
+
 const content = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.",
   "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
@@ -117,3 +121,47 @@ function submitHandler(e) {
 }
 
 form.addEventListener("submit", submitHandler);
+
+const header = document.getElementsByTagName("header");
+const logo = document.getElementById("logo");
+const body = document.getElementsByTagName("body");
+
+function openNav(e) {
+  burger.classList.add("hide");
+  header[0].classList.add("backdrop");
+  const ul = document.createElement("ul");
+  const features = document.createElement("a");
+  features.innerText = "Features";
+  const pricing = document.createElement("a");
+  pricing.innerText = "Pricing";
+  const contact = document.createElement("a");
+  contact.innerText = "Contact";
+  const login = document.createElement("button");
+  login.innerText = "Login";
+  login.classList.add("ghost");
+  close.classList.remove("hide");
+  ul.appendChild(features);
+  ul.appendChild(pricing);
+  ul.appendChild(contact);
+  ul.appendChild(login);
+  ul.classList.add("column");
+  header[0].appendChild(ul);
+  logo.classList.add("white-logo");
+  const mobileSvgs = document.querySelector(".mobile-menu-svgs");
+  mobileSvgs.classList.remove("hide");
+  body[0].classList.add("no-overflow");
+}
+
+burger.addEventListener("click", openNav);
+
+function closeNav(e) {
+  const col = document.querySelector(".column");
+  col.remove();
+  burger.classList.remove("hide");
+  header[0].classList.remove("backdrop");
+  close.classList.add("hide");
+  logo.classList.remove("white-logo");
+  body[0].classList.remove("no-overflow");
+}
+
+close.addEventListener("click", closeNav);
